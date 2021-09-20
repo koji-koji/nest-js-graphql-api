@@ -12,11 +12,11 @@ import { join } from 'path';
       // Schema first approach
       typePaths: ['./**/*.graphql'],
       // 抽象構文木（AST）からTypeScript定義を自動的に生成
-      // definitions: {
-      //   path: join(process.cwd(), 'src/graphql.ts'),
-      //   // classとして出力。デフォルトではインターフェース
-      //   // outputAs: 'class',
-      // },
+      definitions: {
+        path: join(process.cwd(), 'src/graphql.ts'),
+        // classとして出力。デフォルトではインターフェース
+        // outputAs: 'class',
+      },
       // Code first approach
       // autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       // trueの場合はthe schema can be generated on-the-fly in memory
