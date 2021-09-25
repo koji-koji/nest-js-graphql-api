@@ -3,6 +3,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { join } from 'path';
+import { RecipesModule } from './recipes/recipes.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { join } from 'path';
       // 辞書式に並べ替えたいとき。デフォルトでは定義されている順。
       // sortSchema: true
     }),
+    RecipesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
